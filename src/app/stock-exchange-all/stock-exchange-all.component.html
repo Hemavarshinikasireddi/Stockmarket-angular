@@ -1,0 +1,42 @@
+<p>stock-exchange-all works!</p>
+
+  
+<h2>Stock Exchange List</h2><br><br>
+<table class="table table-striped">
+    <thead>
+        <tr><th>ID</th>
+            <th> Name</th>
+            <th> Contact Address</th>
+            <th> Brief</th>
+            <th> Remarks</th>
+            <th> Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= "let stockExchange of stockExchanges">
+            <td>
+                {{stockExchange.id}}
+            </td>
+            <td>
+                {{stockExchange.stockexchange}}
+            </td>
+            <td>
+                {{stockExchange.address}}
+            </td>
+            <td>
+                {{stockExchange.brief}}
+            </td>
+            <td>
+                {{stockExchange.remark}}
+            </td>
+            
+            <td>
+                <button (click) = "updateStockExchange(stockExchange.id)" class ="btn btn-info">Update</button>            
+
+                <button (click) = "deleteStockExchange(stockExchange.id)" class ="btn btn-info" style="margin-left: 10px;">Delete</button>            
+            </td>
+        </tr>
+
+    </tbody>
+</table>

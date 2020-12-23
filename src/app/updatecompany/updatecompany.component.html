@@ -1,0 +1,32 @@
+<h3>Update Company</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Company Name</label>
+      <input type="text" class="form-control" id="CompanyName" required [(ngModel)]="company.CompanyName" name="companyName">
+    </div>
+    <div class="form-group">
+      <label for="name">Turnover</label>
+      <input type="text" class="form-control" id="Turnover" required [(ngModel)]="company.Turnover" name="Turnover">
+    </div>
+
+    <div class="form-group">
+      <label for="name">CEO</label>
+      <input type="text" class="form-control" id="CEO" required [(ngModel)]="company.CEO" name="CEO">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Sector</label>
+        <input type="text" class="form-control" id="Sector" required [(ngModel)]="company.Sector" name="Sector">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Brief description</label>
+        <input type="text" class="form-control" id="brief" required [(ngModel)]="company.Briefwriteup" name="brief">
+      </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+

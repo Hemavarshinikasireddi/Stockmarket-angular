@@ -1,0 +1,35 @@
+<p>companylist works!</p>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Company List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>CompanyName</th>
+            <th>Turnover</th>
+            <th>CEO</th>
+            <th>Sector</th>
+            <th>BoardofDirectors</th>
+            <th>Briefwriteup</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of companies | async">
+            <td>{{c.CompanyName}}</td>
+            <td>{{c.Turnover}}</td>
+            <td>{{c.CEO}}</td>
+            <td>{{c.Sector}}</td>
+            <td>{{c.BoardofDirectors}}</td>
+            <td>{{c.Briefwriteup}}</td>
+            <td><button (click)="deleteCompany(c.id)" class="btn btn-danger">Delete</button>
+                <button (click)="companyDetails(c.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                <button (click)="updateCompany(c.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
